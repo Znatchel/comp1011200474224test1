@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.comp1011200474224test1.DashboardController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="400.0" layoutY="300.0" prefHeight="800.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <CheckBox fx:id="moviesBox" mnemonicParsing="false" text="Movies" />
+                  <CheckBox fx:id="tvShowsBox" mnemonicParsing="false" text="TV Shows" />
+                  <SplitPane />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="comboBox" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="Label2" />
+               </children>
+            </HBox>
+         </bottom>
+         <top>
+            <Label fx:id="Label1" text="Netflix" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="showId" prefWidth="90.13329315185547" text="ShowID" />
+                <TableColumn fx:id="type" prefWidth="101.3333740234375" text="Type" />
+                  <TableColumn fx:id="title" prefWidth="135.46664428710938" text="Title" />
+                  <TableColumn fx:id="rating" prefWidth="144.53329467773438" text="Rating" />
+                  <TableColumn fx:id="director" prefWidth="231.20004272460938" text="Director" />
+                  <TableColumn fx:id="cast" prefWidth="277.8665771484375" text="Cast" />
+              </columns>
+               <padding>
+                  <Insets bottom="60.0" left="20.0" right="20.0" top="40.0" />
+               </padding>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
