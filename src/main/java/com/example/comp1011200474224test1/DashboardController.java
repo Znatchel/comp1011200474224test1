@@ -17,8 +17,9 @@ public class DashboardController implements Initializable {
     @FXML
     private Label Label1;
 
+
     @FXML
-    private Label Label2;
+    private Label totalMoviesLabel;
 
     @FXML
     private TableColumn<Netflix, String> cast;
@@ -58,9 +59,11 @@ public class DashboardController implements Initializable {
         title.setCellValueFactory(new PropertyValueFactory<>("title"));
         rating.setCellValueFactory(new PropertyValueFactory<>("rating"));
         director.setCellValueFactory(new PropertyValueFactory<>("director"));
+        cast.setCellValueFactory(new PropertyValueFactory<>("cast"));
 
         System.out.println(DBUtility.getFlixFromDB().size());
         tableView.getItems().addAll(DBUtility.getFlixFromDB());
+
 
     }
 }

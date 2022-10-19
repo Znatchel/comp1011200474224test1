@@ -11,8 +11,7 @@ import java.util.ArrayList;
 
 
 public class DBUtility {
-    //private static String user = "student"; //MySQL server username
-    //private static String pw = "student";   //MySQL server password
+
 
     private static String user = "student"; //MySQL server username
     private static String pw = "student";   //MySQL server password
@@ -28,8 +27,8 @@ public class DBUtility {
         ArrayList<Netflix> flix = new ArrayList<>();
 
         //create the sql string we want to run on the database
-        String sql = "SELECT showid, type, title, rating, director, cast\n" +
-                "FROM javatest.netflix;";
+        String sql = "SELECT showid, type, title, rating, rating, director,cast" +
+        " FROM javatest.netflix;";
 
 
         try (
@@ -58,6 +57,8 @@ public class DBUtility {
         }
         return flix;
     }
+
+
 
 
 }

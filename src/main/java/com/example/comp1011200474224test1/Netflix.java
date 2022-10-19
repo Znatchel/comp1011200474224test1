@@ -13,7 +13,9 @@ public class Netflix {
         this.type = type;
         this.title = title;
         this.rating = rating;
-        this.director = cast;
+        this.director = director;
+        this.cast = cast;
+
 
     }
 
@@ -22,7 +24,7 @@ public class Netflix {
     }
 
     public void setShowId(int showId) {
-        if (showId>0)
+       if (showId>0)
             this.showId = showId;
         else
             throw new IllegalArgumentException("pizza id should be greater than 0");
@@ -90,7 +92,7 @@ public class Netflix {
             this.director = director;
 
         else
-            throw new IllegalArgumentException("valid string size needs to be greater than 5");
+           throw new IllegalArgumentException("valid string size needs to be greater than 5");
 
     }
 
@@ -103,7 +105,7 @@ public class Netflix {
     }
 
     public void setCast(String cast) {
-        if (cast.length() >= 6)
+       if (cast.length() >= 6)
 
             this.cast = cast;
 
